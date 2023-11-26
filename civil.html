@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>EEE Website</title>
+</head>
+
+<body>
+    <nav>
+        <div class="bg-blue-300 justify-start flex flex-col">
+            <div class="flex items-center justify-between h-16 mx-10">
+                <div class="flex-shrink-0 flex flex-start">
+                    <a href='/'> <img class="h-16 w-32" src="Images/LOGO-with-different-colors-03.png"
+                            alt="Workflow" /></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home"
+                            class="hover-bg-gray-700 text-black px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about"
+                            class="text-black hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#our-faculties"
+                            class="text-black hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium">Our
+                            Faculties</a>
+                        <a href="#our-works"
+                            class="text-black hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-base font-medium">Our
+                            Services</a>
+                        <a href="#contact"
+                            class="text-black hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        <select onchange="location = this.value;"
+                            class="p-3 rounded-lg border-none bg-blue-600 font-syne">
+                            <option value="civil.html">Civil</option>
+                            <option value="index.html">EEE</option>
+
+                            <option value="chem.html">Chemistry</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button"
+                    class="bg-slate-900 md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover-text-white hover-bg-gray-800 focus-outline-none focus-ring-2 focus-ring-offset-2 focus-ring-offset-gray-800 focus-ring-white"
+                    aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+                    <span class="sr-only">Open main menu</span>
+                    <svg id="firstSvg" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="secondSvg" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="display: none;">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-blue-500" style="display:none;">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="hover-bg-gray-700 text-black block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about"
+                    class="text-black hover-bg-gray-700 hover-text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#our-faculties"
+                    class="text-black hover-bg-gray-700 hover-text-white block px-3 py-2 rounded-md text-base font-medium">Our
+                    Faculties</a>
+                <a href="#our-works"
+                    class="text-black hover-bg-gray-700 hover-text-white block px-3 py-2 rounded-md text-base font-medium">Our
+                    Services</a>
+                <a href="#contact"
+                    class="text-black hover-bg-gray-700 hover-text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <select onchange="location = this.value;" class="p-3 rounded-xl">
+                    <option value="civil.html">Civil</option>
+                    <option value="index.html">EEE</option>
+                    <option value="chem.html">Chemistry</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    <main class="h-screen" style="background-image: url('Images/ej-yao-D46mXLsQRJw-unsplash.jpg');">
+        <div class=" md:pl-10 mt-10 md:mt-0">
+            <div class="md:text-4xl text-2xl font-medium ml-10 md-ml-20 bg-windmill font-syne">
+                <h1>CIVIL</h1>
+                <h1 class="ml-10">CONSULTANCY</h1>
+                <h1 class="ml-24">SERVICES</h1>
+            </div>
+            <br />
+            <br />
+            <h1 class="text-white text-2xl md-text-4xl font-bold ml-10 md-ml-20 font-syne">
+                "Building Tomorrow <span class="text-blue-900">Together</span>, <br>One Plan at a <span
+                    class="text-green-500">Time.</span>"
+            </h1>
+            <br />
+            <br />
+            <div class="md:pl-2 ml-10 md:ml-20=">
+                <button id="aboutButton"
+                    class="bg-blue-400 rounded-3xl p-3 flex md-p-4 px-8 md-px-10rounded-xl shadow-md bg-gradient-to-br from-blue-400 to-blue-600 transition-transform transform hover:scale-105">
+                    Know More
+                    <div>
+                        <span> →</span>
+                    </div>
+                </button>
+
+            </div>
+            <script>
+                document.getElementById("aboutButton").addEventListener("click", function () {
+                    const aboutSection = document.getElementById("about");
+                    if (aboutSection) {
+                        aboutSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            </script>
+
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+    </main>
+    <section class="md:flex bg-blue-700 section pt-10" id="about">
+        <div class="m-10 flex-1">
+            <h6 class="text-yellow-300 m-5 font-bold text-3xl flex justify-center font-serif">About us</h6>
+            <h3 class="text-black md:text-2xl text-xl my-4  font-extrabold">Department of Electrical and Electronics
+                Engineering
+            </h3>
+            <h6 class="my-10 text-white text-justify">The Department of Civil Engineering at Karpagam Academy of Higher
+                Education in
+                Coimbatore has established a comprehensive Consultancy and Testing wing since January 2018. Their team
+                of experts provides consultancy in structural design, building construction, planning, and
+                documentation. Moreover, five staff members have received certification as registered engineers in
+                various categories, such as Structural Design work, Developer, Geo Technical Engineering, Registered
+                Engineer, and Construction Engineer, from the local planning authority in Coimbatore. They are actively
+                involved in geotechnical investigations, material and water sample testing, and have contributed to
+                Smart City projects in Coimbatore, Tiruppur, Nilgiris, and the Karur Government Medical College. The
+                department is also authorized to issue Third Party Inspection Certificates for town panchayat road works
+                in Sulur, Vellalore, Kinathukadavu, and Madhukarai. Their consultancy and testing services extend to
+                private construction projects, including multistory buildings, commercial complexes, and industrial
+                sheds, making them a valuable resource for both public and private sector projects in the region.</h6>
+            <button id="servicesButton"
+                class="my-5 p-3 rounded-xl shadow-md bg-gradient-to-br from-blue-400 to-blue-600 transition-transform transform hover:scale-105">
+                Our Services
+            </button>
+            <script>
+                document.getElementById("servicesButton").addEventListener("click", function () {
+                    const servicesSection = document.getElementById("services");
+
+                    if (servicesSection) {
+                        servicesSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            </script>
+
+
+        </div>
+        <div class="md:flex-1 md:m-10 ">
+            <div class="md:flex">
+                <div data-aos="flip-left" data-aos-duration="1000">
+                    <div class="bg-slate-900 w-64 hover:shadow-2xl transition-all rounded-3xl p-7 m-4">
+                        <i class="fa-solid fa-book" style="color: skyblue;"></i>
+                        <h6 class="text-white font-extrabold">Academic Programs</h6>
+                        <p class="text-gray-400">The Department of Civil Engineering offers a range of academic
+                            programs which provide students with a comprehensive education.
+                        </p>
+                        <ul class="list-disc text-gray-400">
+                            <li>Bachelor of Engineering in Civil Engineering</li>
+                            <li>Master of Engineering in Structural Engineering</li>
+                            <li>Ph.D. program in Civil Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div data-aos="flip-left" data-aos-duration="1500">
+                    <div class="bg-slate-900 w-64 hover:shadow-2xl transition-all rounded-3xl p-7 m-4">
+                        <i class="fa-solid fa-shield-halved" style="color: skyblue;"></i>
+                        <h6 class="text-white font-extrabold text-justify">Specializations</h6>
+                        <p class="text-gray-400">The Department of Civil Engineering specializes
+                            in a wide array of areas within the field</p>
+                        <ul class="list-disc text-gray-400">
+                            <li>Structural Engineering</li>
+                            <li>Geotechnical Engineering</li>
+                            <li>Environmental-Engineering</li>
+                            <li>Construction Management</li>
+                            <li>Water Resources Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="md:flex">
+                <div data-aos="flip-left" data-aos-duration="2000">
+                    <div class="bg-slate-900 w-64 hover:shadow-2xl transition-all rounded-3xl p-7 m-4">
+                        <i class="fa-solid fa-flask" style="color: skyblue;"></i>
+                        <h6 class="text-white font-extrabold">Laboratory Facilities</h6>
+                        <p class="text-gray-400">The Department of Civil Engineering is equipped with state-of-the-art
+                            laboratories
+                        </p>
+                        <ul class="list-disc text-gray-400">
+                            <li>Geotechnical Engineering Laboratory</li>
+                            <li>Structural Lab</li>
+                            <li>Construction Lab</li>
+                            <li>Survey Lab</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div data-aos="flip-left" data-aos-duration="3000">
+                    <div class="bg-slate-900 w-64 hover:shadow-2xl transition-all rounded-3xl p-7 m-4">
+                        <i class="fa-solid fa-person-chalkboard" style="color: skyblue;"></i>
+                        <h6 class="text-white font-extrabold">Man Power</h6>
+                        <p class="text-gray-400">A team of dedicated faculty members with both industry and academic
+                            experience guides students in
+                            their educational
+                            journey, providing valuable insights and expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        </div>
+        </div>
+    </section>
+    <section class="bg-gray-100 pb-10" id="our-faculties">
+        <h1 class="flex justify-center font-extrabold text-3xl py-10 font-syne">Our Faculties</h1>
+        <div class="flex flex-wrap justify-evenly">
+            <div></div>
+            <div data-aos="zoom-in" data-aos-duration="1000"
+                class="bg-white md:px-14 rounded-xl mx-10 mt-5 p-10 w-fit flex flex-col flex-wrap items-center justify-center shadow-lg transition-all1 hover:shadow-inner shadow-inner1">
+                <img src="Images/balasundaram.png" alt="HOD" class="w-28 rounded-full">
+                <h6 class="text-xl">Dr. N.Balasundaram</h6>
+                <p class="text-sm">Construction Engineer - CE</p>
+                <button
+                    class="p-3 bg-blue-500 mt-4 rounded-2xl hover:bg-transparent hover:border-blue-500 border-2 transition-all"
+                    onclick="openModal('modal1')">Read More</button>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="1000"
+                class="bg-white md:px-14 rounded-xl mx-10 mt-5 p-10 w-fit flex flex-col flex-wrap items-center justify-center shadow-lg transition-all1 shadow-inner1">
+                <img src="Images/natarajan.png" alt="HOD" class="w-28 rounded-full">
+                <h6 class="text-xl">Dr. M.Natarajan</h6>
+                <p class="text-sm">Geo Tech Engineer - GTE</p>
+                <button
+                    class="p-3 bg-blue-500 mt-4 rounded-2xl hover:bg-transparent hover:border-blue-500 border-2 transition-all"
+                    onclick="openModal('modal2')">Read
+                    More</button>
+
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="900"
+                class="bg-white md:px-14 rounded-xl mx-10 mt-5 p-10 w-fit flex flex-col flex-wrap items-center justify-center shadow-lg transition-all1 shadow-inner1">
+                <img src="Images/muthulakshmi.jpeg" alt="HOD" class="w-28 rounded-full">
+                <h6 class="text-xl">Mrs. K.K.Muthulakshmi</h6>
+                <p class="text-sm">Esteemed member</p>
+                <button
+                    class="p-3 bg-blue-500 mt-4 rounded-2xl hover:bg-transparent hover:border-blue-500 border-2 transition-all"
+                    onclick="openModal('modal3')">Read
+                    More</button>
+
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="1000"
+                class="bg-white md:px-14 rounded-xl mx-10 mt-5 p-10 w-fit flex flex-col flex-wrap items-center justify-center shadow-lg transition-all1 shadow-inner1">
+                <img src="Images/johnpaul.png" alt="HOD" class="w-28 rounded-full">
+                <h6 class="text-xl">Dr. V.Johnpaul</h6>
+                <p class="text-sm">Structural Engineer Grade I - SE</p>
+                <button
+                    class="p-3 bg-blue-500 mt-4 rounded-2xl hover:bg-transparent hover:border-blue-500 border-2 transition-all"
+                    onclick="openModal('modal4')">Read More</button>
+            </div>
+            <div class="text-justify absolute w-fit max-w-lg">
+                <div id="modal1" class="hidden">
+                    <div class="bg-gradient-to-r from-blue-400 to-green-400 p-6 rounded-lg shadow-md relative">
+                        <button type="button"
+                            class="absolute top-2 right-2 text-green-800 hover:text-white border border-green-700 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            onclick="closeModal()">X</button>
+                        <div class="flex items-center">
+                            <img src="Images/balasundaram.png" alt="HOD" class="w-32 rounded-full">
+                            <div class="ml-4">
+                                <h6 class="text-xl md:text-xl font-extrabold">Dr. N.Balasundaram</h6>
+                                <p class="text-sm md:text-sm">Construction Engineer - CE</p>
+                            </div>
+                        </div>
+                        <p>Dr. N. Balasundaram, a highly accomplished Professor&amp; HoD in the Department of Civil
+                            Engineering, is a stalwart in the field of Environmental Engineering. With a Ph.D. in
+                            Environmental Engineering and an extensive 36 years of industrial experience in Coimbatore
+                            corporation (Water Supply Engineer), he has been a valuable addition to our institution
+                            since
+                            joining on July 1, 2010. Born on February 22, 1949, he currently stands at 74 years of age.
+                            Dr.
+                            Balasundaram&#39;s dedication to education is evident through his 13.5 years of university
+                            teaching
+                            experience. He specializes in Environmental Engineering and imparts knowledge to B.E. and
+                            M.E. programs. With 4 years of research experience, he has successfully mentored 18 Ph.D.
+                            Scholars, and 08 others are currently under his guidance. Dr. Balasundaram&#39;s research
+                            contributions include 75 National and International publications, and his academic
+                            achievements
+                            have been recognized with funding of projects budgeted at Rs. 66,820 and Rs. 99,970 in seed
+                            money. You can reach him at 9442130186 or via email at balasundaram.n@kaheduedu.in. His
+                            expertise and prolific contributions greatly enrich our academic community.</p>
+                    </div>
+                </div>
+                <div id="modal2" class="hidden">
+                    <div class="bg-gradient-to-r from-blue-400 to-green-400 p-6 rounded-lg shadow-md relative">
+                        <button type="button"
+                            class="absolute top-2 right-2 text-green-800 hover:text-white border border-green-700 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            onclick="closeModal()">X</button>
+                        <div class="flex items-center">
+                            <img src="Images/natarajan.png" alt="HOD" class="w-32 rounded-full">
+                            <div class="ml-4">
+                                <h6 class="text-xl md:text-xl font-extrabold">Dr. M.Natarajan</h6>
+                                <p class="text-sm md:text-sm">Geo Tech Engineer - GTE</p>
+                            </div>
+                        </div>
+                        <p>Dr. M. Natarajan, a highly accomplished Professor in the Department of Civil Engineering,
+                            brings a wealth of experience and expertise to our institution. With a Ph.D. in Engineering
+                            Geology, Remote Sensing, and GIS from IIT Mumbai, he has made significant \contributions in
+                            the field of advanced surveying and Site investigations. Born on June 6, 1953, and currently
+                            aged
+                            70, Dr. M. Natarajan joined our academic community on December 15, 2014. With 36 years of
+                            teaching experience in Govt. Engg. colleges and 9 years in the university, as well as 4
+                            years of
+                            research experience, he has successfully guided numerous Ph.D. students and maintains an
+                            active
+                            research agenda. His extensive publication record and research grants received underline his
+                            invaluable contributions to our institution. You can reach him at 9843010763 or via email at
+                            pmnatarajanin@gmail.com.</p>
+                    </div>
+                </div>
+                <div id="modal3" class="hidden">
+                    <div class="bg-gradient-to-r from-blue-400 to-green-400 p-6 rounded-lg shadow-md relative">
+                        <button type="button"
+                            class="absolute top-2 right-2 text-green-800 hover:text-white border border-green-700 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            onclick="closeModal()">X</button>
+                        <div class="flex items-center">
+                            <img src="Images/muthulakshmi.jpeg" alt="HOD" class="w-32 rounded-full">
+                            <div class="ml-4">
+                                <h6 class="text-xl md:text-xl font-extrabold">Mrs. K.K.Muthulakshmi</h6>
+                                <p class="text-sm md:text-sm">Esteemed member</p>
+                            </div>
+                        </div>
+                        <p>Mrs. K.K. Muthulakshmi, is an esteemed member of our Civil Engineering department. As a
+                            dedicated Section Officer, She brings a wealth of expertise to keep things running smoothly.
+                            Since joining our team on June 7, 2011, she has become an invaluable member of the
+                            institution.
+                            Approachable and responsive, she is always ready to help students and faculty. You can reach
+                            her anytime at muthul415@gmail.com.
+                            Her journey with us began after an impressive academic career. Mrs. K.K. Muthulakshmi
+                            completed her Civil Engineering undergraduate degree at Karpagam Academy of Higher
+                            Engineering, Coimbatore in 2015, earning an outstanding 7.5 CGPA. Prior to that, she
+                            acquired a
+
+                            notable 74% in Diploma from the Government Polytechnic College for Women, Coimbatore in
+                            the year 2006. Her secondary education at Corporation Girls Higher Secondary School in
+                            Tirunelveli in 2003 also resulted with an excellent 76% score.
+                            She conducts valuable Autocad, Revit and 3Ds Max software courses for engineering students,
+                            as well as Total Station demonstrations for Civil and Architecture students. She also excels
+                            in
+                            computer-related administrative work, maintaining of files and records for the
+                            department&#39;s Ph.D
+                            scholars, publications, lab reports, and more. With her wealth of knowledge and willingness
+                            to
+                            help, she becomes an indispensable part of our institution&#39;s success.</p>
+                    </div>
+                </div>
+                <div id="modal4" class="hidden">
+                    <div class="bg-gradient-to-r from-blue-400 to-green-400 p-6 rounded-lg shadow-md relative">
+                        <button type="button"
+                            class="absolute top-2 right-2 text-green-800 hover:text-white border border-green-700 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            onclick="closeModal()">X</button>
+                        <div class="flex items-center">
+                            <img src="Images/johnpaul.png" alt="HOD" class="w-32 rounded-full">
+                            <div class="ml-4">
+                                <h6 class="text-xl md:text-xl font-extrabold">Dr. V.Johnpaul</h6>
+                                <p class="text-sm md:text-sm">Structural Engineer Grade I - SE</p>
+                            </div>
+                        </div>
+                        <p>Dr. V. Johnpaul, an esteemed member of our faculty, serves as an Assistant Professor in the
+                            Department of Civil
+                            Engineering,
+                            specializing in Structural Engineering. With a strong academic background holding a B.Tech.,
+                            M.E., and a PhD, he
+                            brings a
+                            wealth of knowledge to our institution. Born on November 24, 1990, he is currently 29 years
+                            old and joined our
+                            academic
+                            community on June 6, 2016. His residential address is 3/340, Arul Jothi Nagar,
+                            Karanampettai, and you can reach him
+                            at 9952506549
+                            or via email at Johnpaul.v@kahedu.edu.in. Mr. Johnpaul possesses 2 years of industrial
+                            experience and 4 years of
+                            university
+                            teaching experience. He has a notable 2.5 years of research experience and has guided 4 PG
+                            students in their
+                            research pursuits.
+                            Additionally, he has presented 2 papers internationally and 10 papers nationally,
+                            contributing to 6 international
+                            and 4 national
+                            publications. His dedication and expertise greatly enrich our academic community and add to
+                            the depth of knowledge
+                            in the Department
+                            of Civil Engineering.</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function openModal(modalId) {
+                    var modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = "block";
+                    }
+                }
+
+                function closeModal(modelID) {
+                    document.getElementById('modal1').style.display = 'none';
+                    document.getElementById('modal2').style.display = 'none';
+                    document.getElementById('modal3').style.display = 'none';
+                    document.getElementById('modal4').style.display = 'none';
+                    document.getElementById('modal5').style.display = 'none';
+
+                }
+            </script>
+
+        </div>
+        <br>
+    </section>
+    <section id="services">
+        <h1 class="flex justify-center text-2xl font-extrabold mt-10 font-syne" id="our-works">Our Services</h1>
+        <p class="flex justify-center mx-5 my-2 text-blue-900">Powering Progress with Expert Electrical Services. Your
+            Trusted Partner for a
+            Brighter Tomorrow.</p>
+
+        <div class="flex flex-wrap font-syne justify-evenly text-justify">
+            <div class="w-fit flex flex-col items-center m-12" data-aos="zoom-out-up" data-aos-duration="1000">
+                <div class="absolute text-9xl font-Agbalumo opacity-20">01</div>
+                <div class="flex justify-center mt-24 z-50 text-black font-extrabold text-2xl font-heebo">Structural
+                    Engineering
+                    System</div>
+                <div class="align-bottom max-w-xs ">
+                    <li>Structural Analysis & Design.</li>
+                    <li>Stability of Building structure and Evaluation.</li>
+                    <li>Valuation of Building.</li>
+                    <li>Condition Monitoring, Repair and Rehabilitation of Structures.</li>
+                    <li>Design of Sub & Super Structures.</li>
+                    <li>Design of Retaining Structures.</li>
+                    <li>Project Management Consultancy.</li>
+                </div>
+            </div>
+            <div class="w-fit flex flex-col items-center m-12" data-aos="zoom-out-up" data-aos-duration="1500">
+                <div class="absolute text-9xl font-Agbalumo opacity-20">02</div>
+                <div class="flex justify-center mt-24 z-50 text-black font-extrabold text-2xl font-heebo">Drafting Works
+                </div>
+                <div class="align-bottom max-w-xs ">
+                    <li>Structural Detailing (Bar Bending Schedule).
+                        Corporation Approval Drawings.</li>
+                    <li>Pre DCR Works,
+                        CMDAwork,
+                        Building Completion Certificate.</li>
+                    <li>
+                        Estimate of building structure for bank loan.
+                        Fabrication of Steel Structure.</li>
+                </div>
+            </div>
+            <div class="w-fit flex flex-col items-center m-12" data-aos="zoom-out-up" data-aos-duration="2000">
+                <div class="absolute text-9xl font-Agbalumo opacity-20">03</div>
+                <div class="flex justify-center mt-24 z-50 text-black font-extrabold text-2xl font-heebo">Transportation
+                    Engineering</div>
+                <div class="align-bottom max-w-xs ">
+                    <li>Flexible & Rigid pavement design.
+                        Geometric design of Pavement.</li>
+                    <li> Road Network planning & Design for pavement
+                        (Rigid and Flexible).</li>
+                    <li> Overlays Design of pavement.
+                        Bituminous Mix Design.</li>
+                </div>
+            </div>
+            <div class="w-fit flex flex-col items-center m-12" data-aos="zoom-out-up" data-aos-duration="2000">
+                <div class="absolute text-9xl font-Agbalumo opacity-20">04</div>
+                <div class="flex justify-center mt-24 z-50 text-black font-extrabold text-2xl font-heebo">Tests on
+                    Materials</div>
+                <div class="align-bottom max-w-xs ">
+                    <li>Physical & Mechanical properties of aggregates.</li>
+                    <li>Cement Testing.</li>
+                    <li>Concrete Testing.</li>
+                    <li>Steel Testing.</li>
+                    <li>Brick/ Tile Testing.</li>
+                    <li>Bitumen Testing.</li>
+                </div>
+            </div>
+            <div class="w-fit flex flex-col items-center m-12" data-aos="zoom-out-up" data-aos-duration="2000">
+                <div class="absolute text-9xl font-Agbalumo opacity-20">05</div>
+                <div class="flex justify-center mt-24 z-50 text-black font-extrabold text-2xl font-heebo">Surveying
+                    Works</div>
+                <div class="align-bottom max-w-xs ">
+                    <li>Conducts surveying works using advanced equipment such as Total
+                        Station, GPS technology, etc...</li>
+                    <li>These cutting-edge tools enable precise and efficient data
+                        collection for various civil engineering projects,
+                        ensuring accuracy and reliability in surveying tasks.</li>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+    <section class="bg-slate-200 p-20" data-aos="fade-up">
+        <h1 class="m-10 flex justify-center font-syne font-extrabold text-2xl"> Gallery</h1>
+
+        <div class="grid md:grid-cols-4 md:gap-3 grid-cols-1 gap-4 items-center content-center">
+            <img src="Images/cwork1.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/cwork2.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+            <img src="Images/cwork3.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/cwork4.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/cwork6.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/cwork6.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/cwork7.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+            <img src="Images/cwork8.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+            <img src="Images/civil8.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil9.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+            <img src="Images/civil10.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil11.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil12.png" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil13.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil14.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+            <img src="Images/civil15.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+            <img src="Images/civil16.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil17.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil18.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil19.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64" data-aos="fade-up">
+            <img src="Images/civil20.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+            <img src="Images/civil21.jpg" alt="work"
+                class="grayscale hover:grayscale-0 transition-all md:w-64 md:h-64 w-72 h-64 " data-aos="fade-up">
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-blue-500 md:flex p-24 justify-evenly">
+        <div class="m-2 md:pb-0 pb-10">
+            <h2 class="font-heebo text-xl mb-3">Contact</h2>
+            <p class="font-Agbalumo mb-2">Name</p>
+            <p class="font-syne mb-2">Mobile : 987654321</p>
+            <p class="font-syne">Email Id : civil@gmail.com</p>
+        </div>
+
+        <hr class="vertical-line">
+
+        <div class="font-syne m-2 pb-8 md:pb-0">
+            <h1 class="font-heebo text-xl mb-3">FACULTY COORDINATORS</h1>
+            <h6 class="font-Agbalumo">Dr. N.Balasundaram</h6>
+            <p class="mb-2">Construction Engineer - CE</p>
+            <h6 class="font-Agbalumo">Dr. M.Natarajan</h6>
+            <p class="mb-2">Geo Tech Engineer - GTE</p>
+            <h6 class="font-Agbalumo">Dr. V.Johnpaul</h6>
+            <p class="mb-2">Structural Engineer Grade I - SE</p>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6046292254923!2d76.98510817426192!3d10.91762238923985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85af2d5b63f75%3A0x958123c48e7c849d!2sKarpagam%20Academy%20of%20Higher%20Education!5e0!3m2!1sen!2sin!4v1699178050594!5m2!1sen!2sin"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            class="mt-4 md:mt-0 hidden md:block" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let isOpen = false;
+        let isSecondSvg = false;
+
+        function toggleMobileMenu() {
+            isOpen = !isOpen;
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.style.display = isOpen ? "block" : "none";
+
+            isSecondSvg = !isSecondSvg;
+            const firstSvg = document.getElementById("firstSvg");
+            const secondSvg = document.getElementById("secondSvg");
+            firstSvg.style.display = isSecondSvg ? "none" : "block";
+            secondSvg.style.display = isSecondSvg ? "block" : "none";
+        }
+
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="techhtml-main/index.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
